@@ -74,3 +74,5 @@ function classificaSenha(tamanhoAlfabeto){
         forcaSenha.classList.add('fraca');
     }
 }
+
+aula 8 - min 7:23
