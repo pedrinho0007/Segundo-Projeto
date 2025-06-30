@@ -13,16 +13,16 @@ const forcaSenha = document.querySelector('.forca');
 botoes[0].onclick = diminuiTamanho;
 botoes[1].onclick = aumentaTamanho;
 
-function diminuiTamanho(){
-    if (tamanhoSenha > 1){
+function diminuiTamanho() {
+    if (tamanhoSenha > 1) {
     //tamanhoSenha = tamanhoSenha-1;
     tamanhoSenha--;
     }
     numeroSenha.textContent = tamanhoSenha;
     geraSenha();
 }
-function aumentaTamanho(){
-    if (tamanhoSenha < 20){
+function aumentaTamanho() {
+    if (tamanhoSenha < 20) {
         //tamanhoSenha = tamanhoSenha+1;
         tamanhoSenha++;
     }
@@ -30,13 +30,13 @@ function aumentaTamanho(){
     geraSenha();
 }
 
-for (i=0; i < checkbox.length;i++){
+for (i=0; i < checkbox.length;i++) {
     checkbox[i].onclick = geraSenha;
 }
 
 geraSenha();
 
-function geraSenha(){
+function geraSenha() {
     let alfabeto = '';
     if (checkbox[0].checked){
         alfabeto = alfabeto + letrasMaiusculas;
@@ -75,4 +75,3 @@ function classificaSenha(tamanhoAlfabeto){
     const valorEntropia = document.querySelector('.entropia');
     valorEntropia.textContent = "Um computador pode levar até " + Math.floor(2**entropia/(100e6*60*60*24)) + " dias para descobrir essa senha.";
 }
-
